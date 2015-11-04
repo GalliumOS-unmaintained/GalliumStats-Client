@@ -13,7 +13,8 @@ cmd_info = {
     'os_version': "lsb_release -r | awk '{ print $2 }'",
     'cpu_model': "dmidecode -s processor-version",
     'locale': "echo $LANG",
-    'ram': "free -m | grep Mem | awk '{ print $2 }'"
+    'ram': "free -m | grep Mem | awk '{ print $2 }'",
+    'hdd_size': "df -H | grep /dev/sda1 | awk '{ print $2 }'"
 }
 
 collected = {}
